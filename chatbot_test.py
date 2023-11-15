@@ -46,9 +46,6 @@ with st.chat_message("assistant"):
     if prompt == '#0000':
         full_response += "Volg bijgevoegde instructie voor storing #0000"
         message_placeholder.markdown(full_response + "▌")
-    if prompt == '#0001':
-        full_response += "Volg bijgevoegde instructie voor storing #0001"
-        message_placeholder.markdown(full_response + "▌")
     else: 
         for chunk in assistant_response.split():
             full_response += chunk + " "
