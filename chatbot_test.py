@@ -43,8 +43,11 @@ with st.chat_message("assistant"):
         ]
     )
     # Simulate stream of response with milliseconds delay
-    if prompt == '20':
-        full_response += "Volg instructie nummer 3"
+    if prompt == '#0000':
+        full_response += "Volg bijgevoegde instructie voor storing #0000"
+        message_placeholder.markdown(full_response + "▌")
+    if prompt == '#0001':
+        full_response += "Volg bijgevoegde instructie voor storing #0001"
         message_placeholder.markdown(full_response + "▌")
     else: 
         for chunk in assistant_response.split():
